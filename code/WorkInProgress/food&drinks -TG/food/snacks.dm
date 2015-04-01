@@ -37,6 +37,11 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/attack_self(mob/user)
 	return
+	
+//Suicide by foodstuffs, Probably needs review and testing and whatever.
+/obj/item/weapon/reagent_containers/food/snacks/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] swallowed [src.name] down the wrong hole! It looks like \he's trying to commit suicide.</span>")
+	return (OXYLOSS)
 
 
 /obj/item/weapon/reagent_containers/food/snacks/attack(mob/M, mob/user, def_zone)
